@@ -20,6 +20,7 @@ function onClickButton(e) {
     if (ref.inpElem.value == "") {
         Notiflix.Notify.success('Empty string');
         ref.gallery.innerHTML = "";
+        ref.loadElem.style.display = 'none';
         return
     }
     console.log(ref.inpElem.value);
