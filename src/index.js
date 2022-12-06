@@ -16,6 +16,8 @@ ref.butElem.addEventListener("click", onClickButton);
 ref.loadElem.addEventListener("click", onLoad)
 
 function onClickButton(e) {
+    page = 1;
+    total = 0;
     e.preventDefault();
     if (ref.inpElem.value == "") {
         Notiflix.Notify.success('Empty string');
@@ -38,6 +40,7 @@ function onClickButton(e) {
             ref.gallery.insertAdjacentHTML("beforeend", createMarkupInfo(data.hits));
             if (total === Number(data.totalHits)) {
                 Notiflix.Notify.success("We're sorry, but you've reached the end of search results.");
+                ref.loadElem.style.display = 'none';
             } else {
                 ref.loadElem.style.display = 'block';    
             }
