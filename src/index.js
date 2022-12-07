@@ -74,7 +74,7 @@ function createMarkupInfo(arr) {
                 <b>Downloads</b>${downloads}
             </p>
         </div>
-    </div>`).join();
+    </div>`).join(",");
 }
 
 function onLoad() {
