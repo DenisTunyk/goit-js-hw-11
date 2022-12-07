@@ -74,11 +74,12 @@ function createMarkupInfo(arr) {
                 <b>Downloads</b>${downloads}
             </p>
         </div>
-    </div>`).join(",");
+    </div>`).join("");
 }
 
 function onLoad() {
     page += 1;
+    ref.loadElem.style.display = 'none';
     fetchPics(ref.inpElem.value, page)
         .then(data => {
             console.log(data);
@@ -92,6 +93,8 @@ function onLoad() {
             if (total === Number(data.totalHits)) {
                 ref.loadElem.style.display = 'none';
                 Notiflix.Notify.success("We're sorry, but you've reached the end of search results.");
+            } else {
+                ref.loadElem.style.display = 'block';
             }
         })
         .catch(err => {
