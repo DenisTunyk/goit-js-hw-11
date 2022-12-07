@@ -2,6 +2,7 @@ import { fetchPics } from "./js/axios";
 import Notiflix from 'notiflix';
 
 
+
 const ref = {
     inpElem: document.querySelector(".js-input"),
     butElem: document.querySelector(".js-button"),
