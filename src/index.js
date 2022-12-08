@@ -19,6 +19,7 @@ ref.loadElem.addEventListener("click", onLoad)
 function onClickButton(e) {
     page = 1;
     total = 0;
+    ref.loadElem.style.display = 'none';
     e.preventDefault();
     if (ref.inpElem.value == "") {
         Notiflix.Notify.success('Empty string');
